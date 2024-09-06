@@ -4,11 +4,9 @@
         var aboutContainer = document.getElementById('aboutme');
 
         if (window.scrollY >= scrollLimit) {
-            aboutContainer.style.transition = 'transform 1s ease-out 0s';
-            aboutContainer.style.transform = 'translateX(0px)';
+            aboutContainer.classList.remove('about_panel_hidden');
         } else {
-            aboutContainer.style.transition = 'transform 1s ease-out 0s';
-            aboutContainer.style.transform = 'translateX(-200vh)';
+            aboutContainer.classList.add('about_panel_hidden');
         }
 
     }

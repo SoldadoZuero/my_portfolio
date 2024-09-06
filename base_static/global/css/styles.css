@@ -11,6 +11,7 @@
     --color-persian_green: #1B998B;
     --color-non_photo_blue: #8AC6D0;
     --color-razzmatazz: #E40066;
+    --color-razzmatazz-header: #4823de5e;
     --color-ultra_violet: #484D6D;
     --color-sky-600: #0284c7;
     --color-black-veil: #00000080;
@@ -128,7 +129,7 @@
   }
 
   .header_link:hover {
-    background-color: #4823de8a;
+    background-color: var(--color-razzmatazz-header);
   }
 
   .header_logo {
@@ -356,12 +357,12 @@
     background-color: var(--color-black-veil);
     display: flex;
     justify-content: end;
-    height: 18rem;
+    height: 16.04rem;
     font-family: var(--font-rem);
+    align-items: flex-end;
   }
 
   .about_panel {
-    z-index: 1;
     background-color: var(--color-white);
     background-clip: padding-box;
     width: 55%;
@@ -372,30 +373,38 @@
     border-style: dashed;
     border-bottom-width: 2px;
     border-color: var(--color-gray-5);
+    transition: transform 1s ease-out;
+  }
+
+
+  .about_panel_hidden {
+    transform: translateX(-200vh);
+    transition: transform 1s ease-out;
   }
 
   .about_button_panel {
-    left: 0;
+    z-index: 1;
     position: absolute;
-    z-index: 0;
-    width: 4rem;
-    height: 18rem;
+    width: 55%;
+    height: 4rem;
   }
-    
+  
   .button_about_menu_close {
-    z-index: 5;
-    transform: translateX(0px);
+    margin-top: 3.95rem;
+    transform: translateY(0px);
     width: 100%;
     height: 100%;
-    border-bottom-right-radius: 1rem;
-    border-top-right-radius: 1rem;
     cursor: pointer;
     font-size: 3rem;
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
   }
 
   .button_about_menu_open {
+    margin-top: 1rem;
+    z-index: 1;
     position: absolute;
-    transform: translateX(55rem);
+    transform: translateY(39rem);
   }
 
   .button_about_menu_open i {
@@ -410,45 +419,16 @@
   /* Project Home */  /* Project Home */  /* Project Home */  /* Project Home */  /* Project Home */  /* Project Home */
 
   .project_container {
+    display: flex;
+    justify-content: end;
     background-color: var(--color-black-veil);
     height: 48rem;
     font-family: var(--font-rem);
     transform: translateX(0px);
   }
-
-  .project_title_close {
-    display: flex;
-    left: 0;
-    position: absolute;
-    z-index: 0;
-    width: 55rem;
-    height: 18rem;
-    background-color: var(--color-white);
-    border-bottom-width: 2px;
-    border-right-width: 2px;
-    border-style: dashed;
-    border-bottom-color: var(--color-gray-6);
-    border-right-color: var(--color-gray-6);
-    transform: translateX(-200vh);
-    justify-content: center;
-    align-items: center;
-  }
-
-  .project_title_open {
-    visibility: visible;
-    width: 55rem;
-    transform: translateX(0px);
-  }
-
-  .project_title h1 {
-    font-family: var(--font-rem);
-    font-size: 6.5rem;
-    text-align: center;
-    text-shadow: var(--color-gray-6) 1px 2px;
-  }
   
   .project_panel_close {
-    visibility: hidden;
+    display: none;
     width: 55%;
     height: 4rem;
     position: absolute;
@@ -457,7 +437,6 @@
   }
   
   .project_panel_open {
-    visibility: visible;
     width: 55rem;
     height: fit-content;
     position: absolute;
