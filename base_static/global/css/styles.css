@@ -373,20 +373,16 @@
     border-style: dashed;
     border-bottom-width: 2px;
     border-color: var(--color-gray-5);
-    transition: transform 1s ease-out;
+    transition: 1s cubic-bezier(0.65, 0.05, 0.36, 1);
   }
 
-
-  .about_panel_hidden {
-    transform: translateX(-200vh);
-    transition: transform 1s ease-out;
-  }
-
+  
   .about_button_panel {
     z-index: 1;
     position: absolute;
     width: 55%;
     height: 4rem;
+    transition: 1s cubic-bezier(0.65, 0.05, 0.36, 1);
   }
   
   .button_about_menu_close {
@@ -398,24 +394,30 @@
     font-size: 3rem;
     border-bottom-right-radius: 1rem;
     border-bottom-left-radius: 1rem;
+    transition: 1s cubic-bezier(0.65, 0.05, 0.36, 1);
   }
-
+  
   .button_about_menu_open {
     margin-top: 1rem;
     z-index: 1;
     position: absolute;
     transform: translateY(39rem);
   }
-
+  
   .button_about_menu_open i {
     transition: all 1s cubic-bezier(0.9, -0.03, 0.36, 1) 0s;
     transform: rotate(180deg);
   }
-
+  
   .button_about_menu_close i {
     transition: all 1s cubic-bezier(0.9, -0.03, 0.36, 1) 0s;
   }
-
+  
+  .about_panel_hidden {
+    transform: translateX(-200vh);
+    transition: transform 1s ease-out;
+  }
+  
   /* Project Home */  /* Project Home */  /* Project Home */  /* Project Home */  /* Project Home */  /* Project Home */
 
   .project_container {
@@ -427,22 +429,15 @@
     transform: translateX(0px);
   }
   
-  .project_panel_close {
-    display: none;
-    width: 55%;
-    height: 4rem;
-    position: absolute;
-    right: 0;
-    transform: translateX(-200vh);
+  .project_menu {
+    display: flex;
+    height: 36rem;
+    justify-content: space-between;
+    align-content: space-around;
+    flex-wrap: wrap;
+    align-items: flex-start;
   }
-  
-  .project_panel_open {
-    width: 55rem;
-    height: fit-content;
-    position: absolute;
-    transform: translateX(0px);
-  }
-  
+
   .project_menu img {
     margin: 4rem;
     max-width: 10rem;
@@ -450,22 +445,26 @@
     border-radius: 5px;
   }
   
-  .project_menu_close {
-    visibility: hidden;
-  }
-
   .project_menu_open {
-    visibility: visible;
-    display: flex;
     width: 100%;
-    height: 36rem;
     background-color: var(--color-gray-2);
-    justify-content: space-between;
-    align-content: space-around;
-    flex-wrap: wrap;
-    align-items: flex-start;
     border-bottom-width: 2px;
     border-style: dashed;
     border-bottom-color: var(--color-gray-6);
-    transform: translateX(0px);
+  }
+
+  .project_panel_close {
+    width: 55%;
+    position: absolute;
+    transition: transform 1s ease-out;
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+  
+  .project_panel_open {
+    width: 55%;
+    position: absolute;
+    transition: transform 1s ease-out;
+    transform: scaleY(1);
+    transform-origin: top;
   }
