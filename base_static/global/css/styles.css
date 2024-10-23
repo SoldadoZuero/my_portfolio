@@ -148,18 +148,20 @@
   }
 
   .footer_container {
+    height: 5.5rem;
+    font-size: x-small;
     background-color: var(--color-black-veil);
-    flex: wrap;
     align-items: center;
     border-top-width: 2px;
     border-style: outset;
-    border-top-color: var(--color-gray-2);
+    border-top-color: var(--color-gray-7);
     display: flex;
     padding: 0.5rem;
-    justify-content: space-between;
+    justify-content: space-around;
     max-width: 100%;
     font-family: var(--font-rem);
     color: var(--color-white);
+    flex-direction: column;
   }
 
   .footer_container a {
@@ -192,7 +194,7 @@
   /* Intro Home */  /* Intro Home */  /* Intro Home */  /* Intro Home */  /* Intro Home */  /* Intro Home */  /* Intro Home */
 
   .intro_container {
-    background: var(--color-black-veil);
+    background: linear-gradient(45deg, black, transparent);
     height: 100vh;
   }
 
