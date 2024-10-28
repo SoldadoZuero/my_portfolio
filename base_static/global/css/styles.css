@@ -14,6 +14,9 @@
     --color-razzmatazz-header: #4823de5e;
     --color-ultra_violet: #484D6D;
     --color-sky-600: #0284c7;
+    --color-home-background: #7D53DE;
+    --color-header-background: #7d53de8a;
+    --color-introducing: #001929;
     --color-black-veil: #00000080;
   
     --color-white: #fff;
@@ -100,7 +103,7 @@
 
   /* Header */  /* Header */  /* Header */  /* Header */  /* Header */  /* Header */  /* Header */  /* Header */ 
   .header_background {
-    background: linear-gradient(to top left, var(--color-sky-600) 10%, var(--color-gray-8) 50%, var(--color-chrysler_blue) 90%);
+    background: var(--color-introducing);
   }
 
   .header_container {
@@ -129,7 +132,7 @@
   }
 
   .header_link:hover {
-    background-color: var(--color-razzmatazz-header);
+    background-color: var(--color-introducing);
   }
 
   .header_logo {
@@ -139,12 +142,13 @@
     font-size: xx-large;
     padding: 2px;
     font-style: italic;
+    text-transform: uppercase;
   }
 
   /* Footer */   /* Footer */   /* Footer */   /* Footer */   /* Footer */   /* Footer */   /* Footer */   /* Footer */ 
 
   .footer_background {
-    background: linear-gradient(to bottom right, var(--color-sky-600) 10%, var(--color-gray-8) 50%, var(--color-chrysler_blue) 90%);
+    background: var(--color-introducing);
   }
 
   .footer_container {
@@ -187,14 +191,17 @@
   /* Home */  /* Home */  /* Home */  /* Home */  /* Home */  /* Home */  /* Home */  /* Home */  /* Home */  /* Home */
 
   .home_container {
-    background: linear-gradient(to right, var(--color-persian_green) 10%, var(--color-ultra_violet) 40%, var(--color-sky-600));
+    background: var(--color-home-background);
     position: relative;
+  }
+
+  .home_gradient {
+    background: linear-gradient(45deg, black 10%, transparent);
   }
 
   /* Intro Home */  /* Intro Home */  /* Intro Home */  /* Intro Home */  /* Intro Home */  /* Intro Home */  /* Intro Home */
 
   .intro_container {
-    background: linear-gradient(45deg, black, transparent);
     height: 100vh;
   }
 
@@ -204,17 +211,16 @@
   }
 
   .intro_image {
-    max-width: 82rem;
+    height: 33rem;
     margin-left: 2rem;
     position: static;
-    z-index: 1;
     border-radius: 0.375rem;
   }
 
   .intro_text {
     position: absolute;
     z-index: 2;
-    top: 5rem;
+    top: 15rem;
     right: 8rem;
     margin-left: 1rem;
   }
@@ -229,34 +235,15 @@
     white-space: pre-wrap;
   }
 
-  .intro_subtitle {
-    position: absolute;
-    display: flex;
-    justify-content: flex-end;
-    font-family: var(--font-rem);
-    font-size: small;
-    padding-right: 0;
-    right: 0.5rem;
-    font-weight: bolder;
-    white-space: pre-line;
-    color: var(--color-gray-2);
-  }
-
   /* Course Home */  /* Course Home */  /* Course Home */  /* Course Home */  /* Course Home */  /* Course Home */
 
   .course_container {
-    background-color: var(--color-persian_green);
     outline-width: 4px;
     outline-color: var(--color-non_photo_blue);
     outline-style: solid;
   }
 
-  .course_title_container {
-    background-color: linear-gradient(to bottom, var(--color-sky-600) 20%, var(--color-persian_green) ) / 10%;
-  }
-
   .course_title {
-    background-color: var(--color-black-veil);
     font-family: var(--font-poiret_one);
     text-align: center;
     font-weight: bold;
@@ -268,7 +255,6 @@
   }
 
   .course_progress_container {
-    background-color: var(--color-black-veil);
     display: flex;
     justify-content: space-between;
     padding: 0.75rem;
@@ -356,7 +342,6 @@
   /* About Me Home */  /* About Me Home */  /* About Me Home */  /* About Me Home */  /* About Me Home */  /* About Me Home */
 
   .about_container {
-    background-color: var(--color-black-veil);
     display: flex;
     justify-content: end;
     height: 16.04rem;
@@ -425,7 +410,6 @@
   .project_container {
     display: flex;
     justify-content: end;
-    background-color: var(--color-black-veil);
     height: 48rem;
     font-family: var(--font-rem);
     transform: translateX(0px);
@@ -445,6 +429,7 @@
     max-width: 10rem;
     max-height: 10rem;
     border-radius: 5px;
+    cursor: pointer;
   }
   
   .project_menu_open {
