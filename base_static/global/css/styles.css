@@ -347,24 +347,23 @@
     height: 16.04rem;
     font-family: var(--font-rem);
     align-items: flex-end;
+    margin-bottom: 20rem;
   }
 
   .about_panel {
     background-color: var(--color-white);
     background-clip: padding-box;
     width: 55%;
-    border-top-left-radius: 1rem;
+    border-radius: 1rem 0 0 1rem;
     height: fit-content;
     padding: 3rem 0.5rem 2.8rem 3rem;
     position: absolute;
-    border-style: dashed;
-    border-bottom-width: 2px;
     border-color: var(--color-gray-5);
-    transition: 1s cubic-bezier(0.65, 0.05, 0.36, 1);
+    transition: 0.5s cubic-bezier(0.65, 0.05, 0.36, 1);
   }
   
   .about_panel_hidden {
-    transform: translateX(-200vh);
+    transform: translateX(-250vh);
     transition: transform 1s ease-out;
   }
   
@@ -373,31 +372,60 @@
   .project_container {
     display: flex;
     justify-content: center;
-    height: 48rem;
+    height: fit-content;
     font-family: var(--font-rem);
   }
 
   .project_menu_open img {
-    max-width: 10rem;
-    max-height: 10rem;
-    border-radius: 5px;
+    max-width: 6rem;
+    max-height: 6rem;
     cursor: pointer;
+    margin: 2rem;
+    border-radius: 5px;
   }
 
   .project_menu_open div {
-    size: 4rem;
+    box-shadow: 5px 5px gray;
+    display: flex;
+    width: 30rem;
     background-color: var(--color-gray-2);
-    margin: 0 5rem 0 5rem;
+    margin: 0 5rem 10rem 5rem;;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    transition: 0.5s cubic-bezier(0.65, 0.05, 0.36, 1);
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project_menu_open div:hover {
+    transform: scale(110%);
+    transition: 0.5s cubic-bezier(0.65, 0.05, 0.36, 1);
   }
   
   .project_menu_open {
     border-bottom-color: var(--color-gray-6);
     display: flex;
-    height: 36rem;
-    justify-content: space-between;
+    height: fit-content;
+    justify-content: center;
     align-content: space-around;
     flex-wrap: wrap;
     align-items: flex-start;
+  }
+
+  #twitch_desc {
+    box-shadow: 5px 5px var(--color-home-background);
+  }
+
+  #ftr_desc {
+    box-shadow: 5px 5px var(--color-non_photo_blue);
+  }
+
+  #fabric_desc {
+    box-shadow: 5px 5px var(--color-warning-dark);
+  }
+
+  #django_desc {
+    box-shadow: 5px 5px var(--color-persian_green);
   }
 
   .project_panel_close {
