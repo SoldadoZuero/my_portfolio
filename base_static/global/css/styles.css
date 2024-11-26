@@ -81,6 +81,7 @@
     background: var(--color-gray-1);
     color: var(--color-dark-text);
     margin: auto;
+    overflow-x: hidden;
   }
   
   h1,
@@ -376,7 +377,7 @@
     font-family: var(--font-rem);
   }
 
-  .project_menu_open img {
+  .project_panel img {
     max-width: 6rem;
     max-height: 6rem;
     cursor: pointer;
@@ -384,7 +385,7 @@
     border-radius: 5px;
   }
 
-  .project_menu_open div {
+  .project_panel {
     box-shadow: 5px 5px gray;
     display: flex;
     width: 30rem;
@@ -397,9 +398,18 @@
     align-items: center;
   }
 
-  .project_menu_open div:hover {
+  .project_panel:hover {
     transform: scale(110%);
     transition: 0.5s cubic-bezier(0.65, 0.05, 0.36, 1);
+  }
+
+  .project_panel span {
+    font-family: var(--font-rem);
+    padding-left: 1rem;
+  }
+
+  .project_panel div {
+    margin-bottom: 2rem;
   }
   
   .project_menu_open {
@@ -415,19 +425,19 @@
   #twitch_desc {
     box-shadow: 5px 5px var(--color-home-background);
   }
-
+  
   #ftr_desc {
     box-shadow: 5px 5px var(--color-non_photo_blue);
   }
-
-  #fabric_desc {
+  
+  #js_desc {
     box-shadow: 5px 5px var(--color-warning-dark);
   }
-
+  
   #django_desc {
     box-shadow: 5px 5px var(--color-persian_green);
   }
-
+  
   .project_panel_close {
     width: 55%;
     position: absolute;
