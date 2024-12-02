@@ -122,12 +122,12 @@
   }
 
   .header_boxes {
-    display: flex;
-    flex-wrap: wrap;
+    display:inline-table;
+    align-items: end;
   }
   
   .header_link {
-    padding: 0 2rem 0;
+    padding: 4rem 2rem 29px;
     font-size: large;
     font-family: var(--font-rem);
     transition: all 300ms ease-in-out;
@@ -156,6 +156,11 @@
       color: var(--color-white);
     }
 
+    .header_boxes {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    
     .header_logo {
       padding-bottom: 1rem;
     }
