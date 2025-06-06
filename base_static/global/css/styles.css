@@ -314,12 +314,12 @@
     display: flex;
     width: 30rem;
     background-color: var(--color-gray-2);
-    margin: 0 5rem 10rem 5rem;;
-    justify-content: space-evenly;
+    margin: 0 5rem 10rem 5rem;
     border-radius: 10px;
     transition: 0.5s cubic-bezier(0.65, 0.05, 0.36, 1);
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
   }
 
   .project_panel:hover {
@@ -361,6 +361,15 @@
   #django_desc {
     box-shadow: 5px 5px var(--color-persian_green);
   }
+
+  #other_projects {
+    height: 38rem;
+    box-shadow: 5px 5px var(--color-razzmatazz);
+  }
+
+  #other_projects div {
+    margin-inline: 2rem;
+  }
   
   .project_panel_close {
     width: 55%;
@@ -380,8 +389,19 @@
     border-radius: 5px;
     margin-bottom: 2rem;
     color: var(--color-white);
-    background-color: var(--color-home-background);
     font-family: var(--font-rem);
+  }
+
+  .button_twitch {
+    background-color: var(--color-home-background);
+  }
+
+  .button_django {
+    background-color: var(--color-persian_green);
+  }
+
+  .button_project {
+    background-color: var(--color-razzmatazz);
   }
 
   .project_button i {

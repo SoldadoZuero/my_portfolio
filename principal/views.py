@@ -5,3 +5,7 @@ from django.views.generic import TemplateView
 
 class PrincipalHome(TemplateView):
     template_name = 'principal/pages/home.html'
+
+
+class PrincipalProjects(TemplateView):
+    template_name = 'principal/pages/projects.html'
