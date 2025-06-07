@@ -314,12 +314,12 @@
     display: flex;
     width: 30rem;
     background-color: var(--color-gray-2);
-    margin: 0 5rem 10rem 5rem;;
-    justify-content: space-evenly;
+    margin: 0 5rem 10rem 5rem;
     border-radius: 10px;
     transition: 0.5s cubic-bezier(0.65, 0.05, 0.36, 1);
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
   }
 
   .project_panel:hover {
