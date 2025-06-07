@@ -361,6 +361,15 @@
   #django_desc {
     box-shadow: 5px 5px var(--color-persian_green);
   }
+
+  #other_projects {
+    height: 38rem;
+    box-shadow: 5px 5px var(--color-razzmatazz);
+  }
+
+  #other_projects div {
+    margin-inline: 2rem;
+  }
   
   .project_panel_close {
     width: 55%;
@@ -380,8 +389,19 @@
     border-radius: 5px;
     margin-bottom: 2rem;
     color: var(--color-white);
-    background-color: var(--color-home-background);
     font-family: var(--font-rem);
+  }
+
+  .button_twitch {
+    background-color: var(--color-home-background);
+  }
+
+  .button_django {
+    background-color: var(--color-persian_green);
+  }
+
+  .button_project {
+    background-color: var(--color-razzmatazz);
   }
 
   .project_button i {
