@@ -1,0 +1,21 @@
+[project]
+name = "my-portfolio"
+version = "0.1.0"
+description = "This is my portfolio project, here i will be integrating every project that i made and actually use"
+readme = "README.md"
+license = "GPL-3.0"
+authors = [{ name = "SoldadoZuero", email = "skeleton_fake@outlook.com" }]
+requires-python = ">=3.13"
+dependencies = [
+    "django>=5.2.3",
+    "pillow>=11.2.1",
+    "python-dotenv>=1.1.0",
+]
+
+[project.urls]
+Homepage = "https://www.soldadozuero.com/"
+Repository = "https://github.com/SoldadoZuero/Portifolio.git"
+
+[project.optional-dependencies]
+dev = ["ruff", "pyright", "pytest", "pytest-xdist", "django-debug-toolbar", "ipython"]
+
